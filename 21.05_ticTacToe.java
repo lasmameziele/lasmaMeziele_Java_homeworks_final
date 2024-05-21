@@ -1,4 +1,5 @@
 ```java
+
 import java.util.Scanner;
 
 public class Main {
@@ -17,7 +18,7 @@ public class Main {
 
             if (row >= 0 && row < 3 && col >= 0 && col < 3 && board[row][col] == 0) {
                 board[row][col] = 1;
-                moves++;
+                    movement++;
 
                 if (checkYourWin(board, row)) {
                     gameHasWon = true;
@@ -54,4 +55,6 @@ public class Main {
         return true;
     }
 }
+
+
 ```
