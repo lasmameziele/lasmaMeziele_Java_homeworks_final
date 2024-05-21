@@ -6,12 +6,12 @@ public class Main {
         int[][] board = new int[3][3];
         Scanner scanner = new Scanner(System.in);
         boolean gameHasWon = false;
-        int moves = 0;
+        int movement = 0;
 
-        while (!gameHasWon && moves < 9) {
+        while (!gameHasWon && movement < 9) {
             displayBoard(board);
 
-            System.out.print("Please enter row (0-2) and column (0-2) to place your mark: ");
+            System.out.print("Please enter row (0-2) and column (0-2): ");
             int row = scanner.nextInt();
             int col = scanner.nextInt();
 
@@ -22,15 +22,15 @@ public class Main {
                 if (checkYourWin(board, row)) {
                     gameHasWon = true;
                     displayBoard(board);
-                    System.out.println("Congratulations! You've won!");
+                    System.out.println("Congratulations! You have won!");
                 }
             } else {
-                System.out.println("Invalid move. Try again.");
+                System.out.println("It's an invalid movement. Please try once more.");
             }
         }
 
         if (!gameHasWon) {
-            System.out.println("The game is a draw.");
+            System.out.println("It's not your lucky day!");
         }
 
         scanner.close();
